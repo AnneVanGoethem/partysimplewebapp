@@ -1,0 +1,29 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div th:each="venuename, iStat : ${venues}">
+    <a th:href="@{|/venuedetails/${venuename}|}"
+       th:text="|${venuename}', met index : '${iStat.index}' met in totaal '${iStat.size} ' elementen'| ">
+        venuename
+    </a>
+    <br>
+</div>
+<div th:each="venuename : ${venues}">
+    <a th:href="@{|/venuedetails/${venuename}|}"
+       th:text="|${venuename}', met index : '${venuenameStat.index}' met in totaal '${venuenameStat.size} ' elementen'| ">
+        venuename
+    </a>
+    <br>
+</div>
+<br>-->
+<div th:each="venuename : ${venues}">
+    <a th:href="@{|venuedetailsbyindex/${venuenameStat.index}|}"
+       th:text="${venuename}">venuename
+    </a>
+</div>
+</body>
+</html>

@@ -7,8 +7,10 @@
           th:href="@{/css/style.css}" href="/css/style.css" />
 </head>
 <body>
-<p class="red">about</p>
-<p th:text="${mySpecialNummer}">mySpecialNummer</p>
-<a th:href="@{/home}">home</a>
+<p class="red borderDate" th:text="|De datum van vandaag is ${dateToday}|"></p>
+<p class="red borderDate" th:text="|De uiterste datum van betalen is ${payDate}|">paydate</p>
+
+<h1 th:if="${weekend}">Prettig weekend, je hebt het verdiend</h1>
+<h1 th:unless="${weekend}">Voor je het weet is het weekend!</h1>
 </body>
 </html>
